@@ -1,25 +1,38 @@
-<!-- src/app/components/projects/projects.component.html -->
-
 <section class="section">
   <h2>Projects</h2>
   <div class="projects-grid">
     <div class="project-card" *ngFor="let project of projects">
-      <img [src]="project.image" alt="{{project.name}} screenshot" class="project-image">
+      <!-- Project Image -->
+      <img [src]="project.image" alt="{{ project.name }} screenshot" class="project-image">
+
+      <!-- Project Content -->
       <div class="project-content">
+        <!-- Project Title -->
         <h3 class="project-title">{{ project.name }}</h3>
+
+        <!-- Technologies with Icons -->
         <div class="project-tech">
-          <!-- Display SVG icons for each technology -->
-          <img
-            *ngFor="let tech of project.technologies"
-            [src]="techIcons[tech]"
-            [alt]="tech + ' icon'"
-            [title]="tech"
-            class="tech-icon">
+          <p>Technology:</p>
+          <div class="tech-item" *ngFor="let tech of project.technologies">
+            <img
+              [src]="techIcons[tech]"
+              [alt]="tech + ' icon'"
+              [title]="tech"
+              class="tech-icon">
+          </div>
         </div>
+
+        <!-- Project Description -->
         <p class="project-description">{{ project.description }}</p>
+
+        <!-- Centered Buttons -->
         <div class="project-links">
-          <a class="btn btn-demo" [href]="project.liveDemo" target="_blank" rel="noopener noreferrer">Live Demo</a>
-          <a class="btn btn-github" [href]="project.github" target="_blank" rel="noopener noreferrer">GitHub</a>
+          <a class="btn btn-demo" [href]="project.liveDemo" target="_blank" rel="noopener noreferrer">
+            Live Demo
+          </a>
+          <a class="btn btn-github" [href]="project.github" target="_blank" rel="noopener noreferrer">
+            GitHub
+          </a>
         </div>
       </div>
     </div>
