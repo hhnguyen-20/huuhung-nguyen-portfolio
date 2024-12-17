@@ -1,6 +1,6 @@
 // src/app/components/projects/projects.component.ts
 
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -23,42 +23,29 @@ export class ProjectsComponent {
     'Express': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/express.svg',
     'SQLite': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/sqlite.svg',
     'MongoDB': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/mongodb.svg',
-    'Firebase': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/firebase.svg'
-    // Add more mappings as needed
+    'Firebase': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/firebase.svg',
+    'DALLE-3': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/openai.svg',
+    'Next.js': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/nextdotjs.svg',
+    'PostgreSQL': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postgresql.svg',
+
   };
 
   projects = [
     {
-      name: 'Portfolio Website',
-      technologies: ['Angular', 'TypeScript', 'SCSS'],
-      description: 'A personal portfolio to showcase my projects and experience.',
-      liveDemo: 'https://example-portfolio.com',
-      github: 'https://github.com/username/portfolio',
-      image: 'assets/images/portfolio-screenshot.png'
+      name: 'Portfolio',
+      technologies: ['Angular'],
+      description: 'A personal portfolio website to showcase the projects, education, and work experience.',
+      liveDemo: 'https://huuhung-nguyen-portfolio.vercel.app',
+      github: 'https://github.com/hhnguyen-20/huuhung-nguyen-portfolio',
+      image: 'assets/images/projects/portfolio.png'
     },
     {
-      name: 'E-commerce Store',
-      technologies: ['React', 'Node.js', 'MongoDB'],
-      description: 'An online store with product listings, cart, and checkout functionality.',
-      liveDemo: 'https://example-store.com',
-      github: 'https://github.com/username/ecommerce-store',
-      image: 'assets/images/store-screenshot.png'
-    },
-    {
-      name: 'Chat Application',
-      technologies: ['Vue', 'Firebase'],
-      description: 'A real-time chat application using Firebase authentication and database.',
-      liveDemo: 'https://example-chatapp.com',
-      github: 'https://github.com/username/chat-app',
-      image: 'assets/images/chatapp-screenshot.png'
-    },
-    {
-      name: 'Task Manager',
-      technologies: ['Angular', 'Express', 'SQLite'],
-      description: 'A task management tool with user authentication and CRUD operations.',
-      liveDemo: 'https://example-taskmanager.com',
-      github: 'https://github.com/username/task-manager',
-      image: 'assets/images/taskmanager-screenshot.png'
+      name: 'GoBlog',
+      technologies: ['React', 'Next.js', 'PostgreSQL', 'DALLE-3'],
+      description: 'A blog management system that allows users to create, edit, and delete posts, as well as manage their own comments on those posts. The system supports user authentication, enabling users to sign up, log in, and manage their profiles. GoBlog uses the DALLE-3 API to generate images for blog post thumbnails.',
+      liveDemo: 'https://goblog-eosin.vercel.app',
+      github: 'https://github.com/flotoria/goblog',
+      image: 'assets/images/projects/goblog.png'
     }
     // Add more projects as needed
   ];
