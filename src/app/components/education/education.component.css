@@ -1,0 +1,110 @@
+/* Timeline Container */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+  border-left: 3px solid #999;
+}
+
+/* Timeline Items */
+.timeline-item {
+  position: relative;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+.timeline-item:last-child {
+  margin-bottom: 0;
+}
+
+/* Timeline Dot */
+.timeline-dot {
+  position: absolute;
+  left: -6px;
+  top: 0;
+  width: 12px;
+  height: 12px;
+  background: #2f855a;
+  border-radius: 50%;
+  border: 2px solid #fff;
+}
+
+/* Timeline Content */
+.timeline-content {
+  background: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  position: relative;
+}
+
+.timeline-text-container h3 {
+  margin-top: 0;
+  font-size: 1.4em;
+  color: #2f855a;
+  text-align: center;
+}
+
+.timeline-text-container h3 a {
+  text-decoration: none;
+  color: #2f855a;
+  transition: color 0.3s ease;
+}
+
+.timeline-text-container h3 a:hover {
+  color: #1f583e;
+}
+
+.timeline-text-container h4 {
+  margin: 10px 0 5px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+/* Graduation Year and GPA */
+.edu-year,
+.edu-gpa {
+  margin: 5px 0;
+  font-size: 1em;
+  color: #333;
+  font-weight: bold;
+}
+
+/* Coursework Styling */
+.coursework {
+  margin-top: 10px;
+}
+
+.coursework h5 {
+  margin: 0;
+  font-size: 1.1em;
+  color: #2f855a;
+}
+
+.coursework ul {
+  list-style: disc;
+  margin: 10px 0 0 20px;
+  padding: 0;
+}
+
+.coursework li {
+  font-size: 1em;
+  color: #444;
+  margin-bottom: 5px;
+  line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .timeline-text-container h3 {
+    font-size: 1.2em;
+  }
+
+  .timeline-text-container h4 {
+    font-size: 1.1em;
+  }
+
+  .edu-year,
+  .edu-gpa {
+    font-size: 0.95em;
+  }
+}

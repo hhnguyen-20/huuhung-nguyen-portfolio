@@ -1,0 +1,78 @@
+<!-- src/app/components/header/header.component.html -->
+
+<header>
+  <nav>
+    <!-- Portfolio Title/Logo -->
+    <div class="logo">
+      <a [routerLink]="[]" fragment="intro">Huu Hung's Portfolio</a>
+    </div>
+
+    <!-- Hamburger Menu -->
+    <div
+      class="hamburger"
+      (click)="toggleNavbar()"
+      aria-label="Toggle navigation"
+      [attr.aria-expanded]="isNavbarActive"
+      [ngClass]="{'active': isNavbarActive}">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+
+    <ul class="navbar-nav" [ngClass]="{'active': isNavbarActive}">
+      <li class="nav-item">
+        <a
+          [routerLink]="[]"
+          fragment="about"
+          [ngClass]="{'active': currentFragment === 'about'}">
+          About
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="[]"
+          fragment="projects"
+          [ngClass]="{'active': currentFragment === 'projects'}">
+          Projects
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="[]"
+          fragment="education"
+          [ngClass]="{'active': currentFragment === 'education'}">
+          Education
+        </a>
+      </li>
+
+<!--      <li class="nav-item">-->
+<!--        <a-->
+<!--          [routerLink]="[]"-->
+<!--          fragment="technical-skills"-->
+<!--          [ngClass]="{'active': currentFragment === 'technical-skills'}">-->
+<!--          Technical Skills-->
+<!--        </a>-->
+<!--      </li>-->
+
+      <li class="nav-item">
+        <a
+          [routerLink]="[]"
+          fragment="work-experience"
+          [ngClass]="{'active': currentFragment === 'work-experience'}">
+          Work Experience
+        </a>
+      </li>
+
+      <li class="nav-item">
+        <a
+          [routerLink]="[]"
+          fragment="contact-me"
+          [ngClass]="{'active': currentFragment === 'contact-me'}">
+          Contact Me
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>

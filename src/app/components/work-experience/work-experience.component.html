@@ -1,0 +1,20 @@
+<section class="section">
+  <h2>Work Experience</h2>
+  <div *ngFor="let job of jobs" class="job-entry">
+    <!-- Job Title, Company, and Location -->
+    <div class="job-header">
+      <h3>
+        {{ job.title }}
+        <span class="company">| {{ job.company }}</span>
+        <span class="job-location"> | {{ job.location }}</span>
+      </h3>
+
+      <span class="job-duration">{{ job.startDate }} - {{ job.endDate }}</span>
+    </div>
+
+    <!-- Job Description as List -->
+    <ul class="job-description">
+      <li *ngFor="let point of job.description">{{ point }}</li>
+    </ul>
+  </div>
+</section>

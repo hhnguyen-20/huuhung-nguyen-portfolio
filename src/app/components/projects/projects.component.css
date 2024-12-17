@@ -1,0 +1,110 @@
+/* src/app/components/projects/projects.component.css */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px;
+}
+
+/* Adjust the grid to one column on smaller screens */
+@media (max-width: 768px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.project-card {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px; /* Increased height for better visuals */
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  margin: 0 0 10px;
+  font-size: 1.8em;
+  color: #333;
+}
+
+.project-tech {
+  margin-bottom: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tech-icon {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.tech-icon:hover {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+
+.project-description {
+  flex: 1;
+  font-size: 1em;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.btn {
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-demo {
+  background: #2f855a;
+  color: #fff;
+}
+
+.btn-demo:hover {
+  background: #276749;
+  transform: scale(1.05);
+}
+
+.btn-github {
+  background: #333;
+  color: #fff;
+}
+
+.btn-github:hover {
+  background: #111;
+  transform: scale(1.05);
+}

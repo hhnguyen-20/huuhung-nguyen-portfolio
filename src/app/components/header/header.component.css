@@ -1,0 +1,144 @@
+/* src/app/components/header/header.component.css */
+
+/* Style the header to span full width and have a background */
+header {
+  width: 100%;
+  background-color: #2f855a; /* Change to your preferred color */
+  padding: 10px 0;
+  position: fixed; /* Keeps the navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* Ensures the navbar stays on top */
+}
+
+/* Style the navigation bar */
+nav {
+  max-width: 1200px; /* Adjust based on your design */
+  margin: 0 auto; /* Centers the navbar */
+  padding: 0 20px; /* Adds horizontal padding */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Space between logo and other items */
+}
+
+/* Logo Styling */
+.logo {
+  color: #ffffff; /* Logo text color */
+  font-size: 1.5em; /* Adjust font size as needed */
+  font-weight: bold;
+  cursor: pointer; /* Indicates it's clickable (optional) */
+  text-decoration: none; /* Removes underline if used as a link */
+}
+
+.logo a {
+  color: #ffffff; /* Logo text color */
+  text-decoration: none; /* Removes underline */
+  font-size: 1.5em; /* Adjust font size as needed */
+  font-weight: bold;
+  cursor: pointer; /* Indicates it's clickable */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+.logo a:hover {
+  color: #c6f6d5; /* Lightens the logo color on hover */
+}
+
+/* Remove default list styles and apply Flexbox */
+.navbar-nav {
+  list-style: none; /* Removes bullet points */
+  display: flex; /* Enables Flexbox */
+  justify-content: center; /* Centers the nav items horizontally */
+  align-items: center; /* Centers the nav items vertically */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style each navigation item */
+.nav-item {
+  margin: 0 15px; /* Spacing between nav items */
+}
+
+/* Style the links */
+.nav-item a {
+  color: #ffffff; /* Link text color */
+  text-decoration: none; /* Removes underline */
+  font-size: 1.1em; /* Adjust font size as needed */
+  transition: color 0.3s ease; /* Smooth color transition on hover */
+}
+
+/* Hover effect for links */
+.nav-item a:hover {
+  color: #c6f6d5; /* Lightens the link color on hover */
+}
+
+/* Active link styling */
+.nav-item a.active {
+  border-bottom: 2px solid #c6f6d5; /* Underline the active link */
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none; /* Hidden by default */
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Responsive Design: Show hamburger menu on small screens */
+@media (max-width: 768px) {
+  /* Hide navigation links on small screens */
+  .navbar-nav {
+    flex-direction: column; /* Stacks nav items vertically */
+    background-color: #2f855a; /* Navbar background color */
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    display: none; /* Hides the navbar by default */
+  }
+
+  /* Show navbar when active */
+  .navbar-nav.active {
+    display: flex; /* Shows the navbar when active */
+  }
+
+  /* Vertical spacing between nav items */
+  .nav-item {
+    margin: 10px 0; /* Vertical spacing between nav items */
+  }
+
+  /* Show the hamburger menu */
+  .hamburger {
+    display: flex; /* Shows the hamburger menu */
+  }
+
+  /* Optional: Adjust the logo for small screens */
+  .logo {
+    font-size: 1.3em; /* Slightly smaller on small screens */
+  }
+}
+
+/* Focus Indicators for Accessibility */
+.nav-item a:focus {
+  outline: 2px solid #c6f6d5;
+  outline-offset: 2px;
+}

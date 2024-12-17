@@ -1,0 +1,53 @@
+<section class="section contact-me-section">
+  <!-- Background Image -->
+  <img
+    src="assets/images/contact-me-image.png"
+    alt="Contact Me Background"
+    class="contact-me-background"
+  />
+
+  <div class="contact-content">
+    <h2>Contact Me</h2>
+    <!-- Email Address -->
+    <p class="contact-email">
+      Or reach me directly via email:
+      <a href="mailto:huuhung.nguyen@sjsu.edu" class="email-link">
+        huuhung.nguyen@sjsu.edu
+      </a>
+    </p>
+
+    <!-- Form -->
+    <form [formGroup]="emailForm" (ngSubmit)="sendEmail()">
+      <div>
+        <label for="name">Full Name</label><br>
+        <input id="name" type="text" formControlName="name" required><br><br>
+      </div>
+
+      <div>
+        <label for="subject">Subject</label><br>
+        <input id="subject" type="text" formControlName="subject" required><br><br>
+      </div>
+
+      <div>
+        <label for="email">Email</label><br>
+        <input id="email" type="email" formControlName="email" required><br><br>
+      </div>
+
+      <div>
+        <label for="message">Message</label><br>
+        <textarea id="message" formControlName="message" required></textarea><br><br>
+      </div>
+
+      <button type="submit" [disabled]="emailForm.invalid">Send</button>
+    </form>
+
+    <!-- Success and Error Messages -->
+    <div *ngIf="emailSent" class="success-message">
+      Your message has been sent successfully! I will get back to you soon.
+    </div>
+
+    <div *ngIf="emailError" class="error-message">
+      Oops, there was an error sending your message. Please try again later.
+    </div>
+  </div>
+</section>

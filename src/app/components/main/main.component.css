@@ -1,0 +1,6 @@
+/* src/app/components/main/main.component.css */
+@media (max-width: 768px) {
+  section {
+    padding: 60px 10px;
+  }
+}

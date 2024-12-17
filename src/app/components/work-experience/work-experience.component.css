@@ -1,0 +1,88 @@
+/* Work Experience Header */
+.work-experience h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #2f855a;
+  margin-bottom: 30px;
+  font-weight: bold;
+}
+
+/* Job Entry Card */
+.job-entry {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.job-entry:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Job Header */
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.job-header h3 {
+  font-size: 1.5em;
+  color: #2f855a;
+  margin: 0;
+}
+
+.company,
+.job-location {
+  font-weight: normal;
+  font-size: 1em;
+  color: #555;
+}
+
+.job-duration {
+  font-size: 1em;
+  color: #777;
+}
+
+/* Job Description List */
+.job-description {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.job-description li {
+  font-size: 1.1em;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .work-experience h2 {
+    font-size: 2em;
+  }
+
+  .job-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .job-header h3 {
+    font-size: 1.3em;
+    margin-bottom: 5px;
+  }
+
+  .job-duration {
+    font-size: 0.9em;
+  }
+
+  .job-description li {
+    font-size: 1em;
+  }
+}
