@@ -27,17 +27,19 @@ export class ProjectsComponent {
     'DALLE-3': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/openai.svg',
     'Next.js': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/nextdotjs.svg',
     'PostgreSQL': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postgresql.svg',
-
+    'Django': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/django.svg',
+    'Pandas': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/pandas.svg',
+    'Google Colab': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/googlecolab.svg',
   };
 
   projects = [
     {
-      name: 'Portfolio',
-      technologies: ['Angular'],
-      description: 'A personal portfolio website to showcase the projects, education, and work experience.',
-      liveDemo: 'https://huuhung-nguyen-portfolio.vercel.app',
-      github: 'https://github.com/hhnguyen-20/huuhung-nguyen-portfolio',
-      image: 'assets/images/projects/portfolio.png'
+      name: 'Autism Spectrum Disorder Detection',
+      technologies: ['Django', 'Google Colab'],
+      description: 'A machine learning model that predicts whether a person has autism spectrum disorder (ASD) based on their demographic information and responses to a questionnaire.',
+      liveDemo: 'https://autism-prediction-2025.onrender.com',
+      github: 'https://github.com/hhnguyen-20/autism-prediction',
+      image: 'assets/images/projects/autism-prediction.png'
     },
     {
       name: 'GoBlog',
@@ -46,7 +48,22 @@ export class ProjectsComponent {
       liveDemo: 'https://goblog-eosin.vercel.app',
       github: 'https://github.com/flotoria/goblog',
       image: 'assets/images/projects/goblog.png'
-    }
-    // Add more projects as needed
+    },
+    {
+      name: 'Portfolio',
+      technologies: ['Angular'],
+      description: 'A personal portfolio website to showcase the projects, education, and work experience.',
+      liveDemo: 'https://huuhung-nguyen-portfolio.vercel.app',
+      github: 'https://github.com/hhnguyen-20/huuhung-nguyen-portfolio',
+      image: 'assets/images/projects/portfolio.png'
+    },
+    // {
+    //   name: '',
+    //   technologies: [],
+    //   description: '',
+    //   liveDemo: '',
+    //   github: '',
+    //   image: 'assets/images/projects/'
+    // },
   ];
 }
