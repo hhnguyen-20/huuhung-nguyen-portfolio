@@ -30,12 +30,13 @@ export class ProjectsComponent {
     'Django': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/django.svg',
     'Pandas': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/pandas.svg',
     'Google Colab': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/googlecolab.svg',
+    'Sklearn': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/scikitlearn.svg',
   };
 
   projects = [
     {
       name: 'Autism Spectrum Disorder Detection',
-      technologies: ['Django', 'Google Colab'],
+      technologies: ['Django', 'Sklearn', 'PostgreSQL'],
       description: 'A machine learning model that predicts whether a person has autism spectrum disorder (ASD) based on their demographic information and responses to a questionnaire.',
       liveDemo: 'https://autism-prediction-2025.onrender.com',
       github: 'https://github.com/hhnguyen-20/autism-prediction',
