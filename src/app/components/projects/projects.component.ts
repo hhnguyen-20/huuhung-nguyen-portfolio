@@ -38,7 +38,7 @@ export class ProjectsComponent {
       name: 'Autism Spectrum Disorder Detection',
       technologies: ['Django', 'Sklearn', 'PostgreSQL'],
       description: 'A machine learning model that predicts whether a person has autism spectrum disorder (ASD) based on their demographic information and responses to a questionnaire.',
-      liveDemo: 'https://autism-prediction-2025.onrender.com',
+      liveDemo: 'https://autismprediction.applikuapp.com',
       github: 'https://github.com/hhnguyen-20/autism-prediction',
       image: 'assets/images/projects/autism-prediction.png'
     },
