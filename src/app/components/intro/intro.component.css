@@ -37,9 +37,17 @@
 
 .intro-actions {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap; /* Let buttons wrap onto new row if needed */
   gap: 20px;
-  margin-bottom: 30px;
+  justify-content: center;
+  padding-bottom: 20px;
+}
+
+@media (max-width: 576px) {
+  .intro-actions {
+    flex-direction: column; /* Stack vertically on very small screens */
+    align-items: center;
+  }
 }
 
 /* Rectangular Hire Me Button */

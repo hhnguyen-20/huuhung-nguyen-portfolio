@@ -12,7 +12,7 @@ export class EducationComponent {
       institutionUrl: 'https://www.sjsu.edu',
       degree: 'Bachelor of Science in Computer Science',
       years: 'December 2024',
-      gpa: '3.89/4.0',
+      gpa: '3.90/4.0',
       description: 'Graduated with Honors. Built a solid foundation in programming, algorithms, and data structures.',
       coursework: [
         'Data Structures and Algorithms',

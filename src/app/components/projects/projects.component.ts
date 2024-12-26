@@ -31,6 +31,9 @@ export class ProjectsComponent {
     'Pandas': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/pandas.svg',
     'Google Colab': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/googlecolab.svg',
     'Sklearn': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/scikitlearn.svg',
+    'python': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg',
+    'API': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postman.svg',
+    'Postman': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postman.svg',
   };
 
   projects = [
@@ -49,6 +52,14 @@ export class ProjectsComponent {
       liveDemo: 'https://goblog-eosin.vercel.app',
       github: 'https://github.com/flotoria/goblog',
       image: 'assets/images/projects/goblog.png'
+    },
+    {
+      name: 'Sportify',
+      technologies: ['python', 'Postman'],
+      description: 'A simple Python application built with Tkinter that allows you to search for NBA teams and players. The application uses the API-NBA to get the data.',
+      liveDemo: 'https://github.com/hhnguyen-20/sportify/releases/tag/v1.0.0',
+      github: 'https://github.com/hhnguyen-20/sportify',
+      image: 'assets/images/projects/sportify.png'
     },
     {
       name: 'Portfolio',

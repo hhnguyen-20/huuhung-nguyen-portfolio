@@ -5,6 +5,17 @@
   border-left: 3px solid #999;
 }
 
+@media (max-width: 576px) {
+  .timeline {
+    border-left: none; /* Possibly remove the vertical line on smallest screens */
+    padding-left: 0;
+  }
+
+  .timeline-dot {
+    display: none; /* or position differently */
+  }
+}
+
 /* Timeline Items */
 .timeline-item {
   position: relative;

@@ -1,5 +1,18 @@
 html {
   scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 15px; /* Slightly smaller base font */
+  }
+}
+
+@media (max-width: 480px) {
+  html {
+    font-size: 14px; /* Even smaller on very small screens */
+  }
 }
 
 .main-content {
@@ -19,10 +32,16 @@ hr {
 .section {
   max-width: 900px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 60px 20px; /* Desktop spacing */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   box-sizing: border-box;
   position: relative;
+}
+
+@media (max-width: 768px) {
+  .section {
+    padding: 40px 15px; /* Slightly less for mobile */
+  }
 }
 
 .section label {
