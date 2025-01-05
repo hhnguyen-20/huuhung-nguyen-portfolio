@@ -1,3 +1,5 @@
+<!-- src/app/components/projects/projects.component.html -->
+
 <section class="section">
   <h2>Projects</h2>
   <div class="projects-grid">
@@ -23,7 +25,12 @@
         </div>
 
         <!-- Project Description -->
-        <p class="project-description">{{ project.description }}</p>
+        <p class="project-description">
+          {{ project.isExpanded ? project.description : (project.description | slice:0:150) + '...' }}
+        </p>
+        <button class="read-more-btn" (click)="toggleDescription(project)">
+          {{ project.isExpanded ? 'Read Less' : 'Read More' }}
+        </button>
 
         <!-- Centered Buttons -->
         <div class="project-links">

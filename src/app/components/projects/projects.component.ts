@@ -1,6 +1,6 @@
 // src/app/components/projects/projects.component.ts
 
-import {Component} from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-projects',
@@ -34,24 +34,37 @@ export class ProjectsComponent {
     'python': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg',
     'API': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postman.svg',
     'Postman': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postman.svg',
+    'Tailwind CSS': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tailwindcss.svg',
+    'Python': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg',
   };
 
   projects = [
     {
+      name: 'US Citizenship Prep',
+      technologies: ['TypeScript', 'Next.js', 'Tailwind CSS'],
+      description: 'A web application that helps users prepare for the US citizenship test. The application also mocks the actual test experience by providing a random set of questions and answers.',
+      liveDemo: 'https://citizenprep.vercel.app/',
+      github: 'https://github.com/hhnguyen-20/us-citizenship-test',
+      image: 'assets/images/projects/citizen-prep.png',
+      isExpanded: false
+    },
+    {
       name: 'Autism Spectrum Disorder Detection',
-      technologies: ['Django', 'Sklearn', 'PostgreSQL'],
+      technologies: ['Python', 'Django', 'Sklearn', 'PostgreSQL'],
       description: 'A machine learning model that predicts whether a person has autism spectrum disorder (ASD) based on their demographic information and responses to a questionnaire.',
       liveDemo: 'https://autism-earlycheck.onrender.com',
       github: 'https://github.com/hhnguyen-20/autism-prediction',
-      image: 'assets/images/projects/autism-prediction.png'
+      image: 'assets/images/projects/autism-prediction.png',
+      isExpanded: false
     },
     {
       name: 'GoBlog',
-      technologies: ['React', 'Next.js', 'PostgreSQL', 'DALLE-3'],
+      technologies: ['TypeScript', 'React', 'Next.js', 'PostgreSQL', 'DALLE-3'],
       description: 'A blog management system that allows users to create, edit, and delete posts, as well as manage their own comments on those posts. The system supports user authentication, enabling users to sign up, log in, and manage their profiles. GoBlog uses the DALLE-3 API to generate images for blog post thumbnails.',
       liveDemo: 'https://goblog-eosin.vercel.app',
       github: 'https://github.com/flotoria/goblog',
-      image: 'assets/images/projects/goblog.png'
+      image: 'assets/images/projects/goblog.png',
+      isExpanded: false
     },
     {
       name: 'Sportify',
@@ -59,23 +72,28 @@ export class ProjectsComponent {
       description: 'A simple Python application built with Tkinter that allows you to search for NBA teams and players. The application uses the API-NBA to get the data.',
       liveDemo: 'https://github.com/hhnguyen-20/sportify/releases/tag/v1.0.0',
       github: 'https://github.com/hhnguyen-20/sportify',
-      image: 'assets/images/projects/sportify.png'
+      image: 'assets/images/projects/sportify.png',
+      isExpanded: false
     },
     {
       name: 'Portfolio',
-      technologies: ['Angular'],
+      technologies: ['TypeScript', 'Angular'],
       description: 'A personal portfolio website to showcase the projects, education, and work experience.',
       liveDemo: 'https://huuhung-nguyen-portfolio.vercel.app',
       github: 'https://github.com/hhnguyen-20/huuhung-nguyen-portfolio',
-      image: 'assets/images/projects/portfolio.png'
+      image: 'assets/images/projects/portfolio.png',
+      isExpanded: false
     },
-    // {
-    //   name: '',
-    //   technologies: [],
-    //   description: '',
-    //   liveDemo: '',
-    //   github: '',
-    //   image: 'assets/images/projects/'
-    // },
+    // Add more projects as needed
   ];
+
+  constructor() {}
+
+  /**
+   * Toggles the `isExpanded` state of a project to show or hide its full description.
+   * @param project The project whose description state is to be toggled.
+   */
+  toggleDescription(project: any): void {
+    project.isExpanded = !project.isExpanded;
+  }
 }
