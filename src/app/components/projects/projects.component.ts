@@ -36,9 +36,19 @@ export class ProjectsComponent {
     'Postman': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/postman.svg',
     'Tailwind CSS': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/tailwindcss.svg',
     'Python': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/python.svg',
+    'Plotly': 'https://cdn.jsdelivr.net/npm/simple-icons@v5/icons/plotly.svg',
   };
 
   projects = [
+    {
+      name: 'Titanic Survival Analysis',
+      technologies: ['Python', 'Pandas', 'Sklearn', 'Plotly'],
+      description: 'A data analysis project that visualize the survival rate of passengers and predict the likelihood of survival based on passenger characteristics using Random Forest Classifier. . The project uses the Titanic dataset from Seaborn library. The project also uses Plotly to create interactive plots.',
+      liveDemo: 'https://titanic.pythonanywhere.com',
+      github: 'https://github.com/hhnguyen-20/titanic-survival-analysis',
+      image: 'assets/images/projects/titanic-survival-analysis.png',
+      isExpanded: false
+    },
     {
       name: 'US Citizenship Prep',
       technologies: ['TypeScript', 'Next.js', 'Tailwind CSS'],

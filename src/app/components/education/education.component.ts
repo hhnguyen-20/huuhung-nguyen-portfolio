@@ -8,11 +8,20 @@ import {Component} from '@angular/core';
 export class EducationComponent {
   educationList = [
     {
-      institution: 'San José State University',
+      institution: 'San Jose State University',
+      institutionUrl: 'https://www.sjsu.edu',
+      degree: 'Master of Science in Data Analytics',
+      years: 'Expected May 2027',
+      gpa: '',
+      description: '',
+      coursework: []
+    },
+    {
+      institution: 'San Jose State University',
       institutionUrl: 'https://www.sjsu.edu',
       degree: 'Bachelor of Science in Computer Science',
       years: 'December 2024',
-      gpa: '3.90/4.0',
+      gpa: '3.9/4.0',
       description: 'Graduated with Honors. Built a solid foundation in programming, algorithms, and data structures.',
       coursework: [
         'Data Structures and Algorithms',
@@ -20,7 +29,9 @@ export class EducationComponent {
         'Advanced Python Programming',
         'Database Management Systems',
         'Machine Learning',
-        'Object-Oriented Design (using Java)'
+        'Object-Oriented Design (using Java)',
+        'Data Visualization',
+        'Processing Big Data'
       ]
     },
     {
