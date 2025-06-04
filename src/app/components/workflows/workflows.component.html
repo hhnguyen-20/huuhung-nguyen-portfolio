@@ -1,0 +1,44 @@
+<!-- src/app/components/projects/projects.component.html -->
+
+<section class="section">
+  <h2>n8n Workflows</h2>
+  <div class="projects-grid">
+    <div class="project-card" *ngFor="let project of projects">
+      <!-- Project Image -->
+      <img [src]="project.image" alt="{{ project.name }} screenshot" class="project-image">
+
+      <!-- Project Content -->
+      <div class="project-content">
+        <!-- Project Title -->
+        <h3 class="project-title">{{ project.name }}</h3>
+
+        <!-- Technologies with Icons -->
+        <div class="project-tech">
+          <p>Technology:</p>
+          <div class="tech-item" *ngFor="let tech of project.technologies">
+            <img
+              [src]="techIcons[tech]"
+              [alt]="tech + ' icon'"
+              [title]="tech"
+              class="tech-icon">
+          </div>
+        </div>
+
+        <!-- Project Description -->
+        <p class="project-description">
+          {{ project.isExpanded ? project.description : (project.description | slice:0:150) + '...' }}
+        </p>
+        <button class="read-more-btn" (click)="toggleDescription(project)">
+          {{ project.isExpanded ? 'Read Less' : 'Read More' }}
+        </button>
+
+        <!-- Centered Buttons -->
+        <div class="project-links">
+          <a class="btn btn-github" [href]="project.github" target="_blank" rel="noopener noreferrer">
+            README.md
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

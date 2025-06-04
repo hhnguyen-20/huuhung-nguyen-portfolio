@@ -15,6 +15,7 @@ import {EducationComponent} from './components/education/education.component';
 import {ContactMeComponent} from './components/contact-me/contact-me.component';
 import { MainComponent } from './components/main/main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WorkflowsComponent } from './components/workflows/workflows.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { FooterComponent } from './components/footer/footer.component';
     ContactMeComponent,
     MainComponent,
     IntroComponent,
-    FooterComponent
+    FooterComponent,
+    WorkflowsComponent
   ],
   imports: [
     BrowserModule,
